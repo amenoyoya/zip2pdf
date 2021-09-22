@@ -44,6 +44,10 @@ $ yarn
 
 ### Build executable file
 ```bash
+# prepare `bin` directory
+$ mkdir bin
+$ cp node_modules -r bin/node_modules
+
 # linux
 $ npx nexe zip2pdf.js -o bin/zip2pdf --target linux-x64-14.15.3
 
