@@ -34,7 +34,22 @@ $ npm i
 $ yarn
 
 # => installed: node_modules
-## * node-zip
-## * pdfkit
-## * sharp
+## <dependencies>
+### * node-zip
+### * pdfkit
+### * sharp
+## <devDependencies>
+### * nexe
+```
+
+### Build executable file
+```bash
+# linux
+$ npx nexe zip2pdf.js -o bin/zip2pdf --target linux-x64-14.15.3
+
+# mac
+$ npx nexe zip2pdf.js -o bin/zip2pdf.app --target mac-x64-14.15.3
+
+# windows
+$ npx nexe zip2pdf.js -o bin/zip2pdf.exe --target windows-x64-14.15.3
 ```
