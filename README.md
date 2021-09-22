@@ -32,6 +32,9 @@ $ go mod init zip2pdf
 # install golang.org/x/image/webp
 $ go get golang.org/x/image/webp
 
+# install github.com/signintech/gopdf
+$ go get github.com/signintech/gopdf
+
 # clean the go.mod file
 $ go mod tidy
 ```
