@@ -38,3 +38,16 @@ $ go get github.com/signintech/gopdf
 # clean the go.mod file
 $ go mod tidy
 ```
+
+### Build an executable file
+```bash
+$ go build ./zip2pdf.go
+
+# => generated: executable file
+## - Linux: ./zip2pdf
+## - macOS: ./zip2pdf.app
+## - Windows: ./zip2pdf.exe
+
+# test
+$ ./zip2pdf ./test/test.zip
+```
