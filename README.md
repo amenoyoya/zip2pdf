@@ -7,16 +7,14 @@ Convert zip file to pdf file
 - Shell:
     - PowerShell
     - bash
-- Node.js: `12.21.0`
-    - npm: `7.21.1`
-    - yarn: `1.22.11`
+- Golang: `1.17.1`
 
 ***
 
 ## Usage
 
 ```bash
-$ node zip2pdf.js <ZipFile>
+$ go run zip2pdf.go <ZipFile>
 
 # => generated: <ZipFile>.pdf
 ```
@@ -27,33 +25,13 @@ $ node zip2pdf.js <ZipFile>
 
 ### Setup
 ```bash
-# using npm
-$ npm i
+# initialize dependent modules management file
+## => generated: go.mod
+$ go mod init zip2pdf
 
-# or using yarn
-$ yarn
+# install golang.org/x/image/webp
+$ go get golang.org/x/image/webp
 
-# => installed: node_modules
-## <dependencies>
-### * node-zip
-### * pdfkit
-### * sharp
-## <devDependencies>
-### * nexe
-```
-
-### Build executable file
-```bash
-# prepare `bin` directory
-$ mkdir bin
-$ cp node_modules -r bin/node_modules
-
-# linux
-$ npx nexe zip2pdf.js -o bin/zip2pdf --target linux-x64-14.15.3
-
-# mac
-$ npx nexe zip2pdf.js -o bin/zip2pdf.app --target mac-x64-14.15.3
-
-# windows
-$ npx nexe zip2pdf.js -o bin/zip2pdf.exe --target windows-x64-14.15.3
+# clean the go.mod file
+$ go mod tidy
 ```
